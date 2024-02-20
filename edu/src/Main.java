@@ -9,10 +9,11 @@ public class Main {
             long start = System.nanoTime();
 
             // 穴埋め部
-            String a = "";
+            StringBuilder a = new StringBuilder();
             for (int j = 0; j < 100000; j++) {
-                a += "B";
+                a.append("B");
             }
+            a.toString();
 
             long end = System.nanoTime();
             long result = end - start;
