@@ -4,9 +4,7 @@ public class Main {
         int number = 1;
 
         // 穴埋め部
-        StringBuilder sb = new StringBuilder();
-        sb.append("text = \"").append(text).append("\", number = ").append(number);
-        String displayText = sb.toString();
+        String displayText = String.format("text = \"%s\", number = %d", text, number);
         System.out.println(displayText);
     }
 }
