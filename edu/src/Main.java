@@ -10,7 +10,7 @@ public class Main {
 
         // 穴埋め部
         // for文
-        System.out.print("【for文】");
+        System.out.print("【for文】\n");
         String doublequotation = "\"";
         for (int i = 0; i < list.size(); i++) {
             System.out.print(doublequotation + list.get(i) + doublequotation);
@@ -18,6 +18,14 @@ public class Main {
         }
 
         // 拡張for文
-        System.out.print("【拡張for文】");
+        System.out.print("\n【拡張for文】\n");
+        for (String item : list) {
+            System.out.print(doublequotation + item + doublequotation);
+            System.out.println();
+        }
+
+        // Stream#forEach
+        System.out.print("\n【Stream#forEach】\n");
+        list.stream().forEach(item -> System.out.println(doublequotation + item + doublequotation));
     }
 }
