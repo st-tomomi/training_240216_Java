@@ -1,11 +1,13 @@
 public class Main {
-
     public static void main(String[] args) {
-        Parent a = new Child(1);
-        System.out.printf("a.value = %d\n", a.value);
-        System.out.printf("a.getValue() = %d\n", a.getValue());
-        System.out.printf("a.getValueString() = \"%s\"\n", a.getValueString());
-        System.out.printf("a.getValueString2() = \"%s\"\n", a.getValueString2());
-        System.out.printf(a.getValueString2());
+        String text = "emojiは日本発祥の文化です😄";
+        int length = text.codePointCount(0, text.length());
+        System.out.printf("文字数 = %d\n", length);
+
+        for (int i = 0; i < length; i++) {
+            int index = text.offsetByCodePoints(0, i);
+            int c = text.codePointAt(index);
+            System.out.printf("%d文字目: %c\n", i, c);
+        }
     }
 }
